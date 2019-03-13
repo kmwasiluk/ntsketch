@@ -110,7 +110,7 @@ Hamid Mohamadi, Hamza Khan, and Inanc Birol.
 
 Addendum, alterations made by Kevin Wasiluk
 
-We've made changes and the functionality of ntCard as described above 
+We've made some experimental changes to ntCard that are summarized below.
 
 Run ntSketch
 ==========
@@ -138,7 +138,9 @@ $ ntcard -k 21 -r 20 -p exp_1 --pairwise-distances SRR8691408.fastq SRR8691434.f
 which will write the output into a file 'exp_1_pwd.txt', containing the purported pairwise distances in the form 
 
 d(file 1, file 2) d(file 1, file 3) d(file 1, file 4)
+
 d(file 2, file 3), d(file 2, file 4)
+
 d(file 3, file 4).
 
 and given that we created the sketches we may obtain the same result in a file exp_2_pwd.txt with:
