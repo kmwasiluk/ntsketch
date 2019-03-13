@@ -125,11 +125,12 @@ Parameters:
 When finding pairwise distances, we must 
 
 Examples:
-After running:
+
+We can run 
 ```
 $ ntcard -k 21 -r 20 --sketch SRR8691408.fastq SRR8691434.fastq SRR8691435.fastq SRR6739847.fastq
 ```
-we will have 4 sketches written into our present working directory. 
+after which we will have 4 sketches written into our present working directory. 
 
 We may run e.g.:
 ```
@@ -143,7 +144,7 @@ d(file 2, file 3), d(file 2, file 4)
 
 d(file 3, file 4).
 
-and given that we created the sketches we may obtain the same result in a file exp_2_pwd.txt with:
+Given that we created the sketches we may obtain the same result in a file exp_2_pwd.txt with:
 ```
 $ ntcard -k 21 -r 20 -p exp_2 --pairwise-distances SRR8691408.ntsketch SRR8691434.ntsketch SRR8691435.ntsketch SRR6739847.ntsketch
 ```
