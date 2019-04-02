@@ -302,8 +302,12 @@ void compEstSum(const uint16_t *t_Counter, size_t m, size_t n, double &F0Mean, d
 
     for(size_t i=0; i<opt::nSamp; i++) // nSamp in this case should always be 1
         for(size_t j=0; j<opt::rBuck; j++){
-            ++p[i][t_Counter[m*opt::rBuck+j] + t_Counter[n*opt::rBuck+j]]; //looks like only necessary change... but need to pass correct params
-        }
+            if(t_Counter[m*opt::rBuck+j] + t_Counter[n*opt::rBuck+j] > 65536){ //not clear that this is the best way to handle edge cases
+                ++p[i][65535];
+            }
+            else{
+                ++p[i][t_Counter[m*opt::rBuck+j] + t_Counter[n*opt::rBuck+j]]; //looks like only necessary change... but need to pass correct params
+            }
     double pMean[65536];
     for(size_t i=0; i<65536; i++) pMean[i]=0.0;
     for(size_t i=0; i<65536; i++) {
