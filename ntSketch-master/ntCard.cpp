@@ -54,7 +54,7 @@ size_t rBuck;
 unsigned rBits=27;
 unsigned sBits=11;
 unsigned sMask;
-unsigned covMax=1000;
+unsigned covMax=65536; //important to make this, if not max, then very large.
 size_t nSamp=1;
 size_t nK=0;
 string prefix;
