@@ -137,11 +137,16 @@ $ ntcard -k 21 -r 20 -p exp_1 --pairwise-distances SRR8691408.fastq SRR8691434.f
 ```
 which will write the output into a file 'exp_1_pwd.txt', containing the purported pairwise distances in the form 
 
-0	1	d(0,1)  
+0	1	d(0,1)
+
 0	2	d(0,2)
+
 0	3	d(0,3)
+
 1	2	d(1,2)
+
 1	3	d(1,3)
+
 2	3	d(2,3)
 
 where d(x,y) is the estimated cosine distance between file x and file y.
