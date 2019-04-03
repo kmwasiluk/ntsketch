@@ -122,7 +122,6 @@ Parameters:
   * `-d`   `--pairwise-distances` takes the files give in the args, either with .ntsketch or (.fastq) etc., and attempts to estimate the consine distance of kmer abundances between the reads in each file.
 
 
-When finding pairwise distances, we must 
 
 Examples:
 
