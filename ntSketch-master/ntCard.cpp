@@ -401,11 +401,10 @@ void outForPWDistances(const uint16_t *t_Counter, unsigned fileSize){
             double fMean[65536] = {0};
             compEstSum(t_Counter,(size_t) m,(size_t) n, F0Mean, fMean);
             double z3 = sumOfSquares(fMean);
-            double z4 = (z3 - (z2 + z1))/(2.0); //this is < 0 too frequently to make sense...
+            double z4 = (z3 - (z2 + z1))/(2.0); 
             double pwdmn = 1.0 - z4/(sz1*sqrt(z2));
-            PWDistances << pwdmn << "\t";
+            PWDistances << m << "\t" << n << "\t" << pwdmn << "\n";
         }
-        PWDistances << "\n";
     }
     PWDistances.close();
 }
